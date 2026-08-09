@@ -2181,7 +2181,7 @@ h1, h2, h3, h4, h5, h6 {
 .industry-card h3 {
   font-size: 1.25rem;
   margin-bottom: 12px;
-  color: var(--secondary);
+  color: var(--text-white);
   font-family: var(--font-heading);
   font-weight: 700;
 }
@@ -2500,3 +2500,35 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Image alignment for service pages */
+.service-right-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-service-image img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+
+.collage-grid div img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  aspect-ratio: 4/3;
+  transition: transform 0.3s ease;
+}
+
+.collage-grid div {
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.collage-grid div:hover img {
+  transform: scale(1.08);
+}
