@@ -2,6 +2,6 @@
   "name": "electrofireengineering",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'Static HTML project - skipping build'"
+    "build": "mkdir -p public && cp -r *.html style.css script.js images public/"
   }
 }
