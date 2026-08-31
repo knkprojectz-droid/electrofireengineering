@@ -2323,9 +2323,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-split-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr 380px;
+  gap: 40px 36px;
   align-items: start;
+  grid-auto-rows: minmax(120px, auto);
 }
 
 .service-main-title {
@@ -2334,7 +2335,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   line-height: 1.1;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .service-content {

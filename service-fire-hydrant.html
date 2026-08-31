@@ -10,6 +10,58 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Page-specific: reduce image sizes for Fire Hydrant service */
+    .service-right-images .main-service-image img {
+      max-width: 360px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+
+    /* Thumbnail rows (right column) */
+    .thumb-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .thumb {
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      display: block;
+    }
+
+    .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    /* Fire Pump Room inline gallery removed — images moved into right collage */
+
+    /* Highlight subheadings on this page (covers h2 inside svc rows and service-content) */
+    .service-content h2,
+    .svc-row h2 {
+      background: linear-gradient(90deg, rgba(227,27,35,0.06), rgba(227,27,35,0.02));
+      color: var(--primary);
+      padding: 10px 14px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 16px;
+      border-left: 6px solid rgba(227,27,35,0.95);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      font-weight: 800;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .service-right-images .main-service-image img { max-width: 100%; height: auto; }
+      .service-right-images .collage-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
 </head>
 <body>
 
@@ -42,16 +94,16 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.16-2-4-1.786 2-2.79 3-4 1z"/></svg>
         </div>
         <div class="logo-text">
-          <span class="logo-name">ELECTROFIRE</span>
-          <span class="logo-tagline">Fire Safety Engineering</span>
+          <span class="logo-name">ELECTRO FIRE ENGINEERING</span>
+          <span class="logo-tagline">PVT LTD</span>
         </div>
       </a>
 
       <nav class="nav-menu" id="navMenu">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="why-us.html">Why Us</a>
+        <a href="products.html">Products</a>
+        <a href="import-export.html">Import/Export</a>
         <a href="contact.html">Contact</a>
       </nav>
 
@@ -63,6 +115,7 @@
           <div class="header-phone-text">
             <span class="header-phone-label">Emergency Call</span>
             <span class="header-phone-number">+91 96770 06867</span>
+          </div>
           </div>
         </div>
       </div>
@@ -79,26 +132,60 @@
   <section class="service-details-section" style="padding: 120px 0 80px;">
     <div class="container">
       <div class="service-split-layout">
-        <div class="service-left-content">
+        <!-- Row 1: Hydrant overview + hydrant images -->
+        <div class="svc-row svc-hydrant" style="grid-column:1; grid-row:1;">
           <h1 class="service-main-title">Fire Hydrant Systems</h1>
           <div class="service-content">
-            <p>Our Fire Hydrant Systems are designed to provide a reliable and immediate water supply during fire emergencies, ensuring rapid firefighting response for industrial, commercial, residential, and infrastructure projects.</p>
-<p>We deliver complete hydrant solutions, including design, engineering, supply, installation, testing, commissioning, and maintenance in compliance with national and international fire safety standards.</p>
-<ul>
-    <li>Internal & External Hydrant Networks</li>
-    <li>Landing Valves & Hose Reel Systems</li>
-    <li>Underground & Overhead Piping</li>
-    <li>Yard Hydrant Systems</li>
-    <li>Hydrant Accessories & Valves</li>
-    <li>Testing & Commissioning</li>
-</ul>
+            <p>A complete, integrated fire protection network designed to deliver a dependable flow of water for rapid fire response across your facility.</p>
           </div>
         </div>
-        <div class="service-right-images">
-          <div class="main-service-image">
-            <img src="images/Fire hydrant/Img_1.jpeg" alt="Fire Hydrant Systems">
+        <div class="svc-row svc-hydrant-images" style="grid-column:2; grid-row:1;">
+          <div class="thumb-row">
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_2.jpeg" alt="Fire Hydrant Systems" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_3.jpeg" alt="Fire Hydrant Systems" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_1.jpeg" alt="Fire Hydrant Systems" style="width:100%; height:120px; object-fit:cover;"></div>
           </div>
-          <div class="collage-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;"><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_2.jpeg" alt="Fire Hydrant Systems" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_3.jpeg" alt="Fire Hydrant Systems" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_4.jpeg" alt="Fire Hydrant Systems" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_5.jpeg" alt="Fire Hydrant Systems" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_6.jpeg" alt="Fire Hydrant Systems" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_7.jpeg" alt="Fire Hydrant Systems" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
+        </div>
+
+        <!-- Row 2: Pump room content + pump images -->
+        <div class="svc-row svc-pump" style="grid-column:1; grid-row:2;">
+          <h2>Fire Pump Room</h2>
+          <div class="service-content">
+            <p>Engineered to provide the required water pressure and flow for reliable operation of the complete fire protection system. Equipped with dedicated fire pumps, controllers, valves and essential firefighting equipment.</p>
+          </div>
+        </div>
+        <div class="svc-row svc-pump-images" style="grid-column:2; grid-row:2;">
+          <div class="thumb-row">
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire pump room/Img2.jpeg" alt="Fire Pump Room" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire pump room/Img5.jpeg" alt="Fire Pump Room" style="width:100%; height:120px; object-fit:cover;"></div>
+          </div>
+        </div>
+
+        <!-- Row 3: Pipeline content + pipeline images -->
+        <div class="svc-row svc-pipeline" style="grid-column:1; grid-row:3;">
+          <h2>Fire Pipeline</h2>
+          <div class="service-content">
+            <p>A robust network of fire-rated pipelines designed to deliver water efficiently from the pump room to hydrants and sprinkler points. Installed with quality piping, valves and fittings for dependable performance during emergencies.</p>
+          </div>
+        </div>
+        <div class="svc-row svc-pipeline-images" style="grid-column:2; grid-row:3;">
+          <div class="thumb-row">
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Pipeline works/Screenshot (4031).png" alt="Pipeline works" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Pipeline works/Screenshot (4032).png" alt="Pipeline works" style="width:100%; height:120px; object-fit:cover;"></div>
+          </div>
+        </div>
+        <!-- Row 4: Sprinkler content + sprinkler images -->
+        <div class="svc-row svc-sprinkler" style="grid-column:1; grid-row:4;">
+          <h2>Fire Sprinkler System</h2>
+          <div class="service-content">
+            <p>Our Fire Sprinkler Systems provide automatic fire suppression by detecting heat and controlling fires at their earliest stage, significantly reducing damage and ensuring business continuity.</p>
+          </div>
+        </div>
+        <div class="svc-row svc-sprinkler-images" style="grid-column:2; grid-row:4;">
+          <div class="thumb-row">
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Sprinklers system/ImgS_1.jpeg" alt="Sprinkler system" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Sprinklers system/ImgS_2.jpeg" alt="Sprinkler system" style="width:100%; height:120px; object-fit:cover;"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -114,8 +201,8 @@
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.16-2-4-1.786 2-2.79 3-4 1z"/></svg>
             </div>
             <div class="logo-text">
-              <span class="logo-name">ELECTROFIRE</span>
-              <span class="logo-tagline">Fire Safety Engineering</span>
+              <span class="logo-name">ELECTRO FIRE ENGINEERING</span>
+          <span class="logo-tagline">PVT LTD</span>
             </div>
           </a>
           <p>
@@ -141,9 +228,8 @@
           <h3>Quick Links</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Our Services</a></li>
-            <li><a href="why-us.html">Why Choose Us</a></li>
+            <li><a href="products.html">Products</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>

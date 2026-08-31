@@ -128,7 +128,8 @@ services = [
 import re
 
 for svc in services:
-    gallery_images = [img for img in svc['images'] if img != svc['hero_image']]
+    # Only include gallery images that actually exist on disk
+    gallery_images = [img for img in svc['images'] if img != svc['hero_image'] and os.path.exists(img)]
     
     # We will put up to 6 images in the right-side collage to keep it balanced
     collage_images = gallery_images[:6]

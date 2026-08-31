@@ -1,0 +1,13 @@
+{
+  "name": "electrofireengineering",
+  "version": "1.0.0",
+  "description": "Electro Fire Engineering Website",
+  "main": "script.js",
+  "scripts": {
+    "dev": "serve .",
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
