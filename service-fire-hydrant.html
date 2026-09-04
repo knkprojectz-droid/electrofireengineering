@@ -11,36 +11,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Page-specific: reduce image sizes for Fire Hydrant service */
-    .service-right-images .main-service-image img {
-      max-width: 360px;
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    /* Page-specific: enhanced layout and larger images for Fire Hydrant service */
+    .service-split-layout {
+      grid-template-columns: 1fr 580px !important;
+      gap: 50px 48px !important;
+      align-items: center !important;
     }
 
     /* Thumbnail rows (right column) */
     .thumb-row {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: flex-start;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
+      gap: 16px !important;
+      align-items: stretch !important;
+      width: 100% !important;
     }
 
     .thumb {
-      width: 120px;
-      height: 120px;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: var(--shadow-sm);
-      display: block;
+      width: 100% !important;
+      height: 220px !important;
+      overflow: hidden !important;
+      border-radius: 12px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+      border: 1px solid rgba(255,255,255,0.12) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      display: block !important;
+      position: relative;
     }
 
-    .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+    .thumb:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px rgba(227, 27, 35, 0.35) !important;
+      border-color: rgba(227, 27, 35, 0.4) !important;
+    }
 
-    /* Fire Pump Room inline gallery removed — images moved into right collage */
+    .thumb img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.4s ease !important;
+    }
+
+    .thumb:hover img {
+      transform: scale(1.06);
+    }
 
     /* Highlight subheadings on this page (covers h2 inside svc rows and service-content) */
     .service-content h2,
@@ -57,9 +72,33 @@
     }
 
     /* Responsive adjustments */
-    @media (max-width: 900px) {
-      .service-right-images .main-service-image img { max-width: 100%; height: auto; }
-      .service-right-images .collage-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 1024px) {
+      .service-split-layout {
+        grid-template-columns: 1fr 440px !important;
+      }
+      .thumb {
+        height: 190px !important;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .service-split-layout {
+        grid-template-columns: 1fr !important;
+      }
+      .svc-row {
+        grid-column: 1 !important;
+      }
+      .svc-hydrant { grid-row: 1 !important; }
+      .svc-hydrant-images { grid-row: 2 !important; margin-bottom: 30px; }
+      .svc-pump { grid-row: 3 !important; }
+      .svc-pump-images { grid-row: 4 !important; margin-bottom: 30px; }
+      .svc-pipeline { grid-row: 5 !important; }
+      .svc-pipeline-images { grid-row: 6 !important; margin-bottom: 30px; }
+      .svc-sprinkler { grid-row: 7 !important; }
+      .svc-sprinkler-images { grid-row: 8 !important; }
+      .thumb {
+        height: 200px !important;
+      }
     }
   </style>
 </head>
@@ -91,7 +130,7 @@
     <div class="container">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.16-2-4-1.786 2-2.79 3-4 1z"/></svg>
+          <img src="images/EFElogo.png" alt="Electro Fire Engineering Logo">
         </div>
         <div class="logo-text">
           <span class="logo-name">ELECTRO FIRE ENGINEERING</span>
@@ -141,9 +180,9 @@
         </div>
         <div class="svc-row svc-hydrant-images" style="grid-column:2; grid-row:1;">
           <div class="thumb-row">
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_2.jpeg" alt="Fire Hydrant Systems" style="width:100%; height:120px; object-fit:cover;"></div>
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_3.jpeg" alt="Fire Hydrant Systems" style="width:100%; height:120px; object-fit:cover;"></div>
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire hydrant/Img_1.jpeg" alt="Fire Hydrant Systems" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb"><img src="images/Fire hydrant/Img_2.jpeg" alt="Fire Hydrant Systems"></div>
+            <div class="thumb"><img src="images/Fire hydrant/Img_3.jpeg" alt="Fire Hydrant Systems"></div>
+            <div class="thumb"><img src="images/Fire hydrant/Img_1.jpeg" alt="Fire Hydrant Systems"></div>
           </div>
         </div>
 
@@ -156,8 +195,8 @@
         </div>
         <div class="svc-row svc-pump-images" style="grid-column:2; grid-row:2;">
           <div class="thumb-row">
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire pump room/Img2.jpeg" alt="Fire Pump Room" style="width:100%; height:120px; object-fit:cover;"></div>
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Fire pump room/Img5.jpeg" alt="Fire Pump Room" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb"><img src="images/Fire pump room/Img2.jpeg" alt="Fire Pump Room"></div>
+            <div class="thumb"><img src="images/Fire pump room/Img5.jpeg" alt="Fire Pump Room"></div>
           </div>
         </div>
 
@@ -170,8 +209,8 @@
         </div>
         <div class="svc-row svc-pipeline-images" style="grid-column:2; grid-row:3;">
           <div class="thumb-row">
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Pipeline works/Screenshot (4031).png" alt="Pipeline works" style="width:100%; height:120px; object-fit:cover;"></div>
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Pipeline works/Screenshot (4032).png" alt="Pipeline works" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb"><img src="images/Pipeline works/Screenshot (4031).png" alt="Pipeline works"></div>
+            <div class="thumb"><img src="images/Pipeline works/Screenshot (4032).png" alt="Pipeline works"></div>
           </div>
         </div>
         <!-- Row 4: Sprinkler content + sprinkler images -->
@@ -183,8 +222,8 @@
         </div>
         <div class="svc-row svc-sprinkler-images" style="grid-column:2; grid-row:4;">
           <div class="thumb-row">
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Sprinklers system/ImgS_1.jpeg" alt="Sprinkler system" style="width:100%; height:120px; object-fit:cover;"></div>
-            <div class="thumb" style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Sprinklers system/ImgS_2.jpeg" alt="Sprinkler system" style="width:100%; height:120px; object-fit:cover;"></div>
+            <div class="thumb"><img src="images/Sprinklers system/ImgS_1.jpeg" alt="Sprinkler system"></div>
+            <div class="thumb"><img src="images/Sprinklers system/ImgS_2.jpeg" alt="Sprinkler system"></div>
           </div>
         </div>
       </div>
@@ -198,8 +237,8 @@
         <div class="footer-about">
           <a href="index.html" class="logo">
             <div class="logo-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.16-2-4-1.786 2-2.79 3-4 1z"/></svg>
-            </div>
+          <img src="images/EFElogo.png" alt="Electro Fire Engineering Logo">
+        </div>
             <div class="logo-text">
               <span class="logo-name">ELECTRO FIRE ENGINEERING</span>
           <span class="logo-tagline">PVT LTD</span>

@@ -10,6 +10,146 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Fire Extinguishers Section ── */
+    .fe-section {
+      background: linear-gradient(135deg, rgba(220,38,38,0.07) 0%, rgba(0,0,0,0) 60%);
+      border-top: 1px solid rgba(220,38,38,0.18);
+      padding: 70px 0 80px;
+    }
+    .fe-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .fe-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+    .fe-images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .fe-image-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(220, 38, 38, 0.25);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .fe-image-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba(220, 38, 38, 0.2);
+    }
+    .fe-image-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .fe-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 16px;
+      position: relative;
+      padding-bottom: 14px;
+    }
+    .fe-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 54px;
+      height: 3px;
+      background: #dc2626;
+      border-radius: 2px;
+    }
+    .fe-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+      max-width: 720px;
+    }
+    .fe-range-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      letter-spacing: 0.4px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .fe-range-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .fe-range-list li {
+      background: rgba(220,38,38,0.12);
+      border: 1px solid rgba(220,38,38,0.28);
+      color: #fca5a5;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 999px;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .fe-range-list li:hover {
+      background: rgba(220,38,38,0.28);
+      color: #fff;
+    }
+    /* ── Turnkey Image Grid ── */
+    .turnkey-image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .turnkey-image-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .turnkey-image-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+    }
+    .turnkey-image-card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+    .turnkey-image-label {
+      display: block;
+      width: 100%;
+      padding: 10px 12px;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      color: #e2e8f0;
+      background: rgba(255,255,255,0.06);
+    }
+  </style>
 </head>
 <body>
 
@@ -39,7 +179,7 @@
     <div class="container">
       <a href="index.html" class="logo">
         <div class="logo-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.16-2-4-1.786 2-2.79 3-4 1z"/></svg>
+          <img src="images/EFElogo.png" alt="Electro Fire Engineering Logo">
         </div>
         <div class="logo-text">
           <span class="logo-name">ELECTRO FIRE ENGINEERING</span>
@@ -83,20 +223,64 @@
         <div class="service-left-content">
           <h1 class="service-main-title">Turnkey Engineering Projects</h1>
           <div class="service-content">
-            <p>We provide comprehensive turnkey engineering solutions, managing every stage of the project from concept to completion. Our experienced team handles planning, design, procurement, installation, testing, commissioning, and project handover with a strong focus on quality, safety, and timely execution. With a commitment to engineering excellence and customer satisfaction, we deliver reliable, cost-effective, and customized solutions for industrial, commercial, and infrastructure projects, ensuring every project is completed to the highest standards.</p>
-<h3>Global Export & Import</h3>
-<p>Electro Fire Engineering Pvt. Ltd. is expanding its global presence by offering reliable export and import solutions for engineering, construction, and fire protection materials. With a strong supplier network and commitment to international quality standards, we facilitate seamless global sourcing and distribution while ensuring quality, timely delivery, and competitive pricing.</p>
+            <p>Our turnkey engineering approach brings <strong>engineering, sourcing, installation, testing and commissioning</strong> together under one coordinated execution. Whether it is a new facility, industrial infrastructure or a specialized engineering project, our team manages the complete journey with <strong>technical coordination, quality control and execution discipline</strong>.</p>
           </div>
         </div>
         <div class="service-right-images">
-          <div class="main-service-image">
-            <img src="images/Turnkey engineering/Img_1.jpeg" alt="Turnkey Engineering Projects">
+          <div class="turnkey-image-grid">
+            <div class="turnkey-image-card">
+              <img src="images/Turnkey engineering/Fire Alarm Panels.png" alt="Fire Alarm Panels">
+              <span class="turnkey-image-label">Fire Alarm Panels</span>
+            </div>
+            <div class="turnkey-image-card">
+              <img src="images/Turnkey engineering/Fire Safety Signages.png" alt="Fire Safety Signages">
+              <span class="turnkey-image-label">Fire Safety Signages</span>
+            </div>
+            <div class="turnkey-image-card">
+              <img src="images/Turnkey engineering/Overhead Water Tanks.png" alt="Overhead Water Tanks">
+              <span class="turnkey-image-label">Overhead Water Tanks</span>
+            </div>
+            <div class="turnkey-image-card">
+              <img src="images/Turnkey engineering/Underground Sumps.png" alt="Underground Sumps">
+              <span class="turnkey-image-label">Underground Sumps</span>
+            </div>
           </div>
-          <div class="collage-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;"><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Turnkey engineering/Img_2.jpeg" alt="Turnkey Engineering Projects" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Turnkey engineering/Img_3.jpeg" alt="Turnkey Engineering Projects" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Turnkey engineering/Img_4.jpeg" alt="Turnkey Engineering Projects" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Turnkey engineering/Img_5.jpeg" alt="Turnkey Engineering Projects" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Turnkey engineering/Img_6.jpeg" alt="Turnkey Engineering Projects" style="width: 100%; height: 100%; object-fit: contain;"></div><div style="border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);"><img src="images/Turnkey engineering/Img_7.jpeg" alt="Turnkey Engineering Projects" style="width: 100%; height: 100%; object-fit: contain;"></div></div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Fire Extinguishers Sub-Section -->
+  <section class="fe-section">
+    <div class="container">
+      <div class="fe-inner">
+        <div class="fe-text">
+          <h2 class="fe-title">Fire Extinguishers</h2>
+          <p class="fe-desc">When every second matters, the right extinguisher makes the difference. We provide reliable fire extinguishing solutions engineered to match the <strong>fuel, fire risk and environment</strong>—from offices and commercial spaces to factories, electrical rooms and industrial facilities.</p>
+          <h3 class="fe-range-heading">Our Fire Extinguisher Range</h3>
+          <ul class="fe-range-list">
+            <li>ABC Dry Powder</li>
+            <li>BC Dry Powder</li>
+            <li>CO₂ Extinguishers</li>
+            <li>Foam Extinguishers</li>
+            <li>Water Extinguishers</li>
+            <li>Wet Chemical Extinguishers</li>
+            <li>Clean Agent Extinguishers</li>
+            <li>Class D Extinguishers</li>
+          </ul>
+        </div>
+        <div class="fe-images">
+          <div class="fe-image-card">
+            <img src="images/fire exitingure/Screenshot (409.png" alt="Fire Extinguishers Range & Mobile Foam Unit">
+          </div>
+          <div class="fe-image-card">
+            <img src="images/fire exitingure/Screenshot (4092).png" alt="Fire Extinguishers Installed in Facility">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -105,8 +289,8 @@
         <div class="footer-about">
           <a href="index.html" class="logo">
             <div class="logo-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1 0 12 0c0-1.532-1.056-3.16-2-4-1.786 2-2.79 3-4 1z"/></svg>
-            </div>
+          <img src="images/EFElogo.png" alt="Electro Fire Engineering Logo">
+        </div>
             <div class="logo-text">
               <span class="logo-name">ELECTRO FIRE ENGINEERING</span>
           <span class="logo-tagline">PVT LTD</span>
