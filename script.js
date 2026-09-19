@@ -232,22 +232,27 @@ document.addEventListener('DOMContentLoaded', () => {
   let testimonialAutoPlay;
 
   function updateTestimonialSlider() {
+    if (!testimonialTrack) return;
     const offset = -currentTestimonial * 100;
     testimonialTrack.style.transform = `translateX(${offset}%)`;
   }
 
   function nextTestimonial() {
+    if (!testimonialCards.length) return;
     currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
     updateTestimonialSlider();
   }
 
   function prevTestimonial() {
+    if (!testimonialCards.length) return;
     currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
     updateTestimonialSlider();
   }
 
   function startTestimonialAutoPlay() {
-    testimonialAutoPlay = setInterval(nextTestimonial, 6000);
+    if (testimonialTrack && testimonialCards.length > 0) {
+      testimonialAutoPlay = setInterval(nextTestimonial, 6000);
+    }
   }
 
   function resetTestimonialAutoPlay() {
@@ -255,98 +260,117 @@ document.addEventListener('DOMContentLoaded', () => {
     startTestimonialAutoPlay();
   }
 
-  testimonialNext.addEventListener('click', () => {
-    nextTestimonial();
-    resetTestimonialAutoPlay();
-  });
+  if (testimonialNext) {
+    testimonialNext.addEventListener('click', () => {
+      nextTestimonial();
+      resetTestimonialAutoPlay();
+    });
+  }
 
-  testimonialPrev.addEventListener('click', () => {
-    prevTestimonial();
-    resetTestimonialAutoPlay();
-  });
+  if (testimonialPrev) {
+    testimonialPrev.addEventListener('click', () => {
+      prevTestimonial();
+      resetTestimonialAutoPlay();
+    });
+  }
 
   startTestimonialAutoPlay();
 
   // ---------- Contact Form Handling ----------
   const contactForm = document.getElementById('contactForm');
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    const formData = {
-      name: document.getElementById('contact-name').value,
-      email: document.getElementById('contact-email').value,
-      phone: document.getElementById('contact-phone').value,
-      service: document.getElementById('contact-service').value,
-      message: document.getElementById('contact-message').value
-    };
+      const formData = {
+        name: document.getElementById('contact-name')?.value || '',
+        email: document.getElementById('contact-email')?.value || '',
+        phone: document.getElementById('contact-phone')?.value || '',
+        service: document.getElementById('contact-service')?.value || '',
+        message: document.getElementById('contact-message')?.value || ''
+      };
 
-    // Simulate form submission
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spinning">
-        <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
-      </svg>
-      Sending...
-    `;
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
+      // Simulate form submission
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      if (!submitBtn) return;
+      const originalText = submitBtn.innerHTML;
       submitBtn.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="20 6 9 17 4 12"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spinning">
+          <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
         </svg>
-        Message Sent!
+        Sending...
       `;
-      submitBtn.style.background = '#27ae60';
+      submitBtn.disabled = true;
 
       setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-        submitBtn.style.background = '';
-        contactForm.reset();
-      }, 2500);
-    }, 1500);
-  });
+        submitBtn.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Message Sent!
+        `;
+        submitBtn.style.background = '#27ae60';
+
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.background = '';
+          contactForm.reset();
+        }, 2500);
+      }, 1500);
+    });
+  }
 
   // ---------- Newsletter Form ----------
   const newsletterForm = document.getElementById('newsletterForm');
 
-  newsletterForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const input = newsletterForm.querySelector('input');
-    const btn = newsletterForm.querySelector('button');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const input = newsletterForm.querySelector('input');
+      const btn = newsletterForm.querySelector('button');
 
-    btn.innerHTML = '✓';
-    btn.style.background = '#27ae60';
-    input.value = '';
-    input.placeholder = 'Subscribed!';
+      if (btn) {
+        btn.innerHTML = '✓';
+        btn.style.background = '#27ae60';
+      }
+      if (input) {
+        input.value = '';
+        input.placeholder = 'Subscribed!';
+      }
 
-    setTimeout(() => {
-      btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>`;
-      btn.style.background = '';
-      input.placeholder = 'Enter your email';
-    }, 2500);
-  });
+      setTimeout(() => {
+        if (btn) {
+          btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>`;
+          btn.style.background = '';
+        }
+        if (input) {
+          input.placeholder = 'Enter your email';
+        }
+      }, 2500);
+    });
+  }
 
   // ---------- Back to Top Button ----------
   const backToTop = document.getElementById('backToTop');
 
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 400) {
-      backToTop.classList.add('visible');
-    } else {
-      backToTop.classList.remove('visible');
-    }
-  });
-
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 400) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
     });
-  });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 
   // ---------- Parallax Effect on Hero ----------
   window.addEventListener('scroll', () => {
@@ -370,5 +394,82 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.head.appendChild(style);
 
+  // ---------- Service Page Images Lightbox / Pop-up ----------
+  const serviceImages = document.querySelectorAll(
+    '.service-details-section img, .fe-section img, .turnkey-image-card img, .fe-image-card img, .thumb img, .main-service-image img, .collage-grid img'
+  );
+
+  if (serviceImages.length > 0) {
+    // Create modal elements
+    const lightbox = document.createElement('div');
+    lightbox.className = 'image-lightbox';
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-label', 'Image preview');
+
+    lightbox.innerHTML = `
+      <div class="image-lightbox-content">
+        <button class="image-lightbox-close" aria-label="Close image preview">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <img class="image-lightbox-img" src="" alt="Expanded service preview">
+        <div class="image-lightbox-caption"></div>
+      </div>
+    `;
+
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('.image-lightbox-img');
+    const lightboxCaption = lightbox.querySelector('.image-lightbox-caption');
+    const closeBtn = lightbox.querySelector('.image-lightbox-close');
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || 'Service preview';
+      lightboxCaption.textContent = alt && alt !== 'Service preview' ? alt : '';
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        lightboxImg.src = '';
+        lightboxCaption.textContent = '';
+      }, 300);
+    }
+
+    serviceImages.forEach(img => {
+      // Don't bind if inside logo or header
+      if (img.closest('.logo') || img.closest('.header') || img.closest('.footer')) return;
+      img.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openLightbox(img.currentSrc || img.src, img.alt);
+      });
+    });
+
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeLightbox();
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target.classList.contains('image-lightbox-content')) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
 
 });
+

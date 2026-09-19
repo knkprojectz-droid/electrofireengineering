@@ -12,14 +12,14 @@
     .ie-kicker{display:inline-block;color:var(--primary,#e31b23);text-transform:uppercase;font-weight:900;letter-spacing:2px;padding:10px 16px;border-radius:6px;margin-bottom:8px;font-size:26px}
     .ie-tagline{color:#fff;opacity:0.95;margin:8px 0 14px;font-size:18px}
     .ie-left h1{font-size:36px;margin-bottom:12px}
-    .ie-left h2{background:linear-gradient(90deg, rgba(227,27,35,0.06), rgba(227,27,35,0.02));color:var(--primary,#e31b23);padding:8px 12px;border-radius:6px;display:inline-block;border-left:6px solid rgba(227,27,35,0.95);margin:18px 0;font-weight:800}
-    .ie-left p{color:#ddd;line-height:1.6}
-    .ie-left ul{margin-top:12px;color:#ddd}
-    .ie-right{padding:8px}
-    .ie-actions{display:flex;gap:12px;align-items:center}
-    .collage-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:0;transform:translateY(-36px)}
-    .collage-grid img{width:100%;height:220px;object-fit:contain;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.35);background:#0b0b0b;padding:6px}
-    @media (max-width:900px){.collage-grid{transform:none}.collage-grid img{height:160px}}
+    .ie-left p{color:#ddd;line-height:1.6;font-size:16px}
+    .ie-portfolio-heading{background:linear-gradient(90deg, rgba(227,27,35,0.06), rgba(227,27,35,0.02));color:var(--primary,#e31b23);padding:8px 12px;border-radius:6px;display:inline-block;border-left:6px solid rgba(227,27,35,0.95);margin:0 0 12px 0;font-weight:800;font-size:24px}
+    .ie-portfolio-list{margin:0 0 20px 0;padding-left:20px;color:#ddd;line-height:1.8}
+    .collage-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:10px}
+    .portfolio-img-label{grid-column:1 / -1;color:#fff;font-size:16px;font-weight:700;text-align:center;padding:8px 12px;background:rgba(227,27,35,0.12);border-radius:6px;border:1px solid rgba(227,27,35,0.3);margin-top:-4px;margin-bottom:8px;letter-spacing:0.5px}
+    .collage-grid img{width:100%;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.35);background:#0b0b0b;padding:0}
+    .collage-grid img.img-center-span{grid-column:1 / -1;width:70%;max-width:320px;justify-self:center}
+    @media (max-width:900px){.collage-grid{transform:none}.collage-grid img{height:160px}.collage-grid img.img-center-span{width:100%;max-width:100%}}
     .btn-file{display:inline-block;padding:10px 16px;border-radius:6px;border:1px solid #ddd;background:#f7f7f7}
     @media (max-width:900px){.service-split-layout{grid-template-columns:1fr;}.ie-right{margin-top:20px}}
   </style>
@@ -63,31 +63,24 @@
         <div class="ie-tagline">Bringing the Right Products to the Right Market</div>
         <h1>Source with confidence</h1>
         <p>Supply with precision. Deliver with commitment. We focus on reliable sourcing, product quality, competitive solutions and professional coordination to make international trade simpler for our customers. From trusted sources to your doorstep — we move products, not just shipments.</p>
-
-        <h2>Our Product Portfolio</h2>
-        <ul>
-          <li>Fire Protection &amp; Fire-Fighting Products</li>
-          <li>Engineering &amp; Industrial Materials</li>
-          <li>Agri products and basic commodities</li>
-        </ul>
       </div>
 
       <aside class="ie-right">
-        <div style="height:8px"></div>
+        <h2 class="ie-portfolio-heading">Our Product Portfolio</h2>
 
         <input type="file" id="fileInput" accept="application/json" style="display:none">
 
         <!-- import/export controls removed as requested -->
 
-        <pre id="output" style="margin-top:18px;max-height:300px;overflow:auto;background:transparent;color:#ddd;padding:12px;border-radius:6px"></pre>
-
         <div class="collage-grid">
           <img src="images/import-export/img-1.jpg.png" alt="industrial fittings and valves">
           <img src="images/import-export/img-2.jpg.png" alt="warehouse shelving and parts">
+          <div class="portfolio-img-label">Fire Protection &amp; Fire-Fighting Products</div>
           <img src="images/import-export/img-3.jpg.png" alt="container ship with containers">
           <img src="images/import-export/img-4.jpg.png" alt="fire extinguishers in warehouse">
-          <img src="images/import-export/img-5.jpg.png" alt="agri products &amp; spices in container">
-          <img src="images/import-export/img-1.jpg.png" alt="industrial fittings and valves (repeat)">
+          <div class="portfolio-img-label">Engineering &amp; Industrial Materials</div>
+          <img src="images/import-export/img-5.jpg.png" alt="agri products &amp; spices in container" class="img-center-span">
+          <div class="portfolio-img-label">Agri products and basic commodities</div>
         </div>
       </aside>
     </div>

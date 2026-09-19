@@ -10,6 +10,116 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Fire Extinguishers Section Styling ── */
+    .service-split-layout {
+      grid-template-columns: 1fr 500px !important;
+      gap: 40px !important;
+      align-items: start !important;
+    }
+    .fe-range-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      letter-spacing: 0.4px;
+      margin: 24px 0 16px;
+      text-transform: uppercase;
+    }
+    .fe-range-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .fe-range-list li {
+      background: rgba(220,38,38,0.12);
+      border: 1px solid rgba(220,38,38,0.28);
+      color: #fca5a5;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 999px;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .fe-range-list li:hover {
+      background: rgba(220,38,38,0.28);
+      color: #fff;
+    }
+    .fe-images-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      width: 100%;
+    }
+    .fe-image-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(220, 38, 38, 0.22);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .fe-image-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba(220, 38, 38, 0.25);
+    }
+    .fe-image-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .fe-image-card:hover img {
+      transform: scale(1.03);
+    }
+    .fe-image-card.card-featured {
+      grid-column: 1 / -1;
+    }
+    .fe-image-card.card-featured img {
+      height: 230px;
+      object-fit: cover;
+    }
+    .fe-image-card.card-product img {
+      object-fit: contain;
+      background: #0d0d0d;
+      padding: 12px;
+      box-sizing: border-box;
+    }
+    .fe-card-label {
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      background: rgba(0, 0, 0, 0.4);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+    @media (max-width: 960px) {
+      .service-split-layout {
+        grid-template-columns: 1fr !important;
+      }
+      .fe-images-grid {
+        max-width: 580px;
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: 540px) {
+      .fe-images-grid {
+        grid-template-columns: 1fr;
+      }
+      .fe-image-card.card-featured {
+        grid-column: 1;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -83,14 +193,36 @@
         <div class="service-left-content">
           <h1 class="service-main-title">Fire Extinguishers</h1>
           <div class="service-content">
-            <p>Supply, installation, and refilling of all types of portable and trolley-mounted fire extinguishers (ABC, CO2, Foam, Water) for immediate response to incipient fires.</p>
+            <p>Our Fire Extinguishers provide quick, effective first-response protection against fire. Easy to operate and suitable for various risk areas, they ensure reliable safety and rapid control of emergency situations.</p>
+            <p>When every second matters, the right extinguisher makes the difference. We provide reliable fire extinguishing solutions engineered to match the <strong>fuel, fire risk and environment</strong>—from offices and commercial spaces to factories, electrical rooms and industrial facilities.</p>
+            <h3 class="fe-range-heading">Our Fire Extinguisher Range</h3>
+            <ul class="fe-range-list">
+              <li>ABC Dry Powder</li>
+              <li>BC Dry Powder</li>
+              <li>CO₂ Extinguishers</li>
+              <li>Foam Extinguishers</li>
+              <li>Water Extinguishers</li>
+              <li>Wet Chemical Extinguishers</li>
+              <li>Clean Agent Extinguishers</li>
+              <li>Class D Extinguishers</li>
+            </ul>
           </div>
         </div>
         <div class="service-right-images">
-          <div class="main-service-image">
-            <img src="images/service-extinguisher.png" alt="Fire Extinguishers">
+          <div class="fe-images-grid">
+            <div class="fe-image-card card-featured">
+              <img src="images/fire exitingure/Screenshot (4092).png" alt="Fire Extinguishers Installed in Facility">
+              <span class="fe-card-label">Industrial & Facility Installation</span>
+            </div>
+            <div class="fe-image-card card-product">
+              <img src="images/fire exitingure/Screenshot (409.png" alt="Fire Extinguishers Range">
+              <span class="fe-card-label">Portable Extinguisher Range</span>
+            </div>
+            <div class="fe-image-card card-product">
+              <img src="images/fire exitingure/trolley-fire-extinguisher.png" alt="Mobile Trolley Fire Extinguisher Unit">
+              <span class="fe-card-label">Mobile Trolley Extinguisher Unit</span>
+            </div>
           </div>
-          
         </div>
       </div>
     </div>
