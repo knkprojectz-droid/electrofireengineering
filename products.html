@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | Electrofire Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,15 +42,19 @@
         <div class="header-phone-text"><span class="header-phone-number">+91 96770 06867</span></div>
       </div>
 
-      <div class="mobile-menu-toggle" id="mobileMenuToggle"></div>
+      <div class="mobile-menu-toggle" id="mobileMenuToggle">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </header>
+
+  <div class="nav-overlay" id="navOverlay"></div>
 
   <!-- Products content intentionally removed per request -->
   <main style="padding:60px 0">
     <div class="container">
       <div style="max-width:980px;margin:0 auto;line-height:1.6;color:#ddd">
-        <h1>PRODUCTS</h1>
+        <h1 style="color: var(--primary);">PRODUCTS</h1>
         <p style="font-weight:700;margin-top:8px">Sourcing the Right Products. Supporting Every Project.</p>
 
         <p style="margin-top:18px">
@@ -58,20 +65,310 @@
           From critical fire-fighting equipment and industrial valves to metals, electrical systems, plumbing solutions, PUF panels, and engineering materials, we source products that align with technical specifications, quality standards, project needs, and commercial expectations.
         </p>
 
-        <h2 style="margin-top:22px">Our Product Portfolio</h2>
-        <ul style="margin-top:12px;">
-          <li><strong>Fire Protection & Fire-Fighting Solutions:</strong> Extinguishers, hydrant systems, sprinklers, fire alarms and suppression equipment.</li>
-          <li><strong>Engineering & Industrial Products:</strong> Components, equipment and materials for diverse industrial applications.</li>
-          <li><strong>Metals & Raw Materials:</strong> Steel, pipes, sheets, structural materials and industrial raw materials.</li>
-          <li><strong>Construction & Interior Materials:</strong> PUF panels, building materials, finishing products and project essentials.</li>
-          <li><strong>Plumbing Products & Fittings:</strong> Pipes, fittings, accessories and water-management components.</li>
-          <li><strong>Industrial Valves & Flow-Control:</strong> Valves and flow-control products for industrial and process applications.</li>
-          <li><strong>Electrical Cables & Wires:</strong> Reliable electrical materials for industrial and project requirements.</li>
-          <li><strong>Safety & Industrial Products:</strong> Workplace safety equipment and essential industrial supplies.</li>
-          <li><strong>Agri Products & Basic Commodities:</strong> Selected agricultural products and essential commodities for domestic and international markets.</li>
-        </ul>
+        <div class="products-showcase-section" style="margin: 40px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 35px;">
+            <span style="display: inline-block; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--primary); margin-bottom: 10px; background: rgba(227, 27, 35, 0.12); border: 1px solid rgba(227, 27, 35, 0.35); padding: 6px 18px; border-radius: 30px;">Our Product Portfolio</span>
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Fire Protection &amp; Fire-Fighting Solutions</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 0 auto; border-radius: 2px;"></div>
+          </div>
 
-        <p style="margin-top:24px;font-weight:700">One Network. Multiple Industries. Reliable Supply.</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            
+            <!-- Extinguishers -->
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/fire-extinguisher.png" alt="Extinguishers" style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Extinguishers</h3>
+            </div>
+
+            <!-- Hydrant Systems -->
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/hydrant-system.png" alt="Hydrant Systems" style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Hydrant Systems</h3>
+            </div>
+
+            <!-- Sprinklers -->
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/fire-sprinkler.png" alt="Sprinklers" style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Sprinklers</h3>
+            </div>
+
+            <!-- Fire Alarms -->
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/fire-alarm.png" alt="Fire Alarms" style="max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Fire Alarms</h3>
+            </div>
+
+            <!-- Suppression Equipment -->
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/suppression-equipment.jpg" alt="Suppression Equipment" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Suppression Equipment</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2. Engineering & Industrial Products -->
+        <div class="products-showcase-section" style="margin: 55px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Engineering &amp; Industrial Products</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 14px auto; border-radius: 2px;"></div>
+            <p style="color: #aaa; max-width: 700px; margin: 0 auto; font-size: 0.95rem;">Components, equipment and materials for diverse industrial applications.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/components.jpg" alt="Precision Components" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Components</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/heavy-mechanical-gears.jpg" alt="Heavy Mechanical Gears" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Heavy Mechanical Gears</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/equipment.jpg" alt="Industrial Equipment" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Equipment</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/materials.jpg" alt="Industrial Materials" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Materials</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Metals & Raw Materials -->
+        <div class="products-showcase-section" style="margin: 55px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Metals &amp; Raw Materials</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 14px auto; border-radius: 2px;"></div>
+            <p style="color: #aaa; max-width: 700px; margin: 0 auto; font-size: 0.95rem;">Steel, pipes, sheets, structural materials and industrial raw materials.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/steel-plates.jpg" alt="Steel" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Steel</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/steel-pipes.jpg" alt="Pipes" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Pipes</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/steel-sheets.jpg" alt="Sheets" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Sheets</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/structural-materials.jpg" alt="Structural Materials" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Structural Materials</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Construction & Interior Materials -->
+        <div class="products-showcase-section" style="margin: 55px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Construction &amp; Interior Materials</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 14px auto; border-radius: 2px;"></div>
+            <p style="color: #aaa; max-width: 700px; margin: 0 auto; font-size: 0.95rem;">PUF panels, building materials, finishing products and project essentials.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/puf-panels.jpg" alt="PUF Panels" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">PUF Panels</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/building-materials.jpg" alt="Building Materials" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Building Materials</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/finishing-products.jpg" alt="Finishing Products" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Finishing Products</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Plumbing Products & Fittings -->
+        <div class="products-showcase-section" style="margin: 55px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Plumbing Products &amp; Fittings</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 14px auto; border-radius: 2px;"></div>
+            <p style="color: #aaa; max-width: 700px; margin: 0 auto; font-size: 0.95rem;">Pipes, fittings, accessories and water-management components.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/plumbing-pipes.jpg" alt="Pipes" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Pipes</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/plumbing-fittings-sub.jpg" alt="Fittings" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Fittings</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/plumbing-accessories.jpg" alt="Accessories" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Accessories</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/water-management.jpg" alt="Water-Management Components" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Water-Management Components</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Industrial Valves & Flow-Control -->
+        <div class="products-showcase-section" style="margin: 55px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Industrial Valves &amp; Flow-Control</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 14px auto; border-radius: 2px;"></div>
+            <p style="color: #aaa; max-width: 700px; margin: 0 auto; font-size: 0.95rem;">Valves and flow-control products for industrial and process applications.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/gate-valves.jpg" alt="Industrial Valves" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Valves</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/flow-control-valves.jpg" alt="Flow-Control Products" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Flow-Control Products</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Electrical Cables & Wires -->
+        <div class="products-showcase-section" style="margin: 55px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Electrical Cables &amp; Wires</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 14px auto; border-radius: 2px;"></div>
+            <p style="color: #aaa; max-width: 700px; margin: 0 auto; font-size: 0.95rem;">Reliable electrical materials for industrial and project requirements.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/armoured-cables.jpg" alt="Electrical Cables" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Electrical Cables</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/insulated-wires.jpg" alt="Wires" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Wires</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Safety & Industrial Products -->
+        <div class="products-showcase-section" style="margin: 55px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Safety &amp; Industrial Products</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 14px auto; border-radius: 2px;"></div>
+            <p style="color: #aaa; max-width: 700px; margin: 0 auto; font-size: 0.95rem;">Workplace safety equipment and essential industrial supplies.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/workplace-safety.jpg" alt="Workplace Safety Equipment" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Workplace Safety Equipment</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/industrial-supplies.jpg" alt="Industrial Supplies" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Essential Industrial Supplies</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Agri Products & Basic Commodities -->
+        <div class="products-showcase-section" style="margin: 55px 0 50px 0;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="font-size: 2.1rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 auto; text-align: center;">Agri Products &amp; Basic Commodities</h2>
+            <div style="width: 70px; height: 3px; background: var(--primary); margin: 14px auto 14px auto; border-radius: 2px;"></div>
+            <p style="color: #aaa; max-width: 700px; margin: 0 auto; font-size: 0.95rem;">Selected agricultural products and essential commodities for domestic and international markets.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; justify-content: center;">
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/agri-commodities.jpg" alt="Agricultural Products" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Agricultural Products</h3>
+            </div>
+
+            <div style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 22px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.borderColor='var(--primary)'; this.style.transform='translateY(-6px)'; this.style.boxShadow='0 10px 25px rgba(227,27,35,0.25)';" onmouseout="this.style.borderColor='#262626'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+              <div style="width: 100%; height: 180px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0) 70%);">
+                <img src="images/products/essential-commodities.jpg" alt="Essential Commodities" style="max-width: 100%; max-height: 100%; object-fit: cover; border-radius: 6px; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5)); transition: transform 0.3s ease;">
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.3px;">Essential Commodities</h3>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding: 30px; background: #141414; border: 1px solid #262626; border-radius: 14px;">
+          <p style="font-size: 1.3rem; font-weight: 800; color: var(--primary); margin: 0; letter-spacing: 0.5px;">ONE NETWORK. MULTIPLE INDUSTRIES. RELIABLE SUPPLY.</p>
+        </div>
       </div>
     </div>
   </main>
@@ -115,6 +412,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Our Services</a></li>
             <li><a href="products.html">Products</a></li>
+            <li><a href="import-export.html">Import/Export</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -122,11 +420,11 @@
         <div class="footer-links-col">
           <h3>Our Services</h3>
           <ul class="footer-links">
-            <li><a href="services.html">Fire Alarm Systems</a></li>
-            <li><a href="services.html">Fire Suppression</a></li>
-            <li><a href="services.html">Safety Equipment</a></li>
-            <li><a href="services.html">Risk Assessment</a></li>
-            <li><a href="services.html">Safety Training</a></li>
+            <li><a href="service-fire-hydrant.html">Fire Hydrant System</a></li>
+            <li><a href="service-fire-alarm.html">Fire Alarm System</a></li>
+            <li><a href="service-fire-suppression.html">Fire Suppression System</a></li>
+            <li><a href="service-fire-extinguishers.html">Fire Extinguisher</a></li>
+            <li><a href="service-turnkey.html">Turnkey Engineering Projects</a></li>
           </ul>
         </div>
 
